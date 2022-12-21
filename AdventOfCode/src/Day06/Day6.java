@@ -13,7 +13,8 @@ public class Day6 {
 
     private static void partA(){
         try{
-            Scanner sc = new Scanner(new File("src/Day6/input.txt"));
+            Scanner sc = new Scanner(new File("src/Day06/input.txt"));
+            System.out.println("Part A:");
 
             String input = "";
 
@@ -33,7 +34,7 @@ public class Day6 {
                     marker = marker + 4;
                     break;
                 }
-                System.out.println("Current marker: " + marker);
+                //System.out.println("Current marker: " + marker);
                 marker++;
             }
 
@@ -43,7 +44,35 @@ public class Day6 {
     }
 
     private static void partB(){
+        try{
+            Scanner sc = new Scanner(new File("src/Day06/input.txt"));
+            System.out.println("Part B:");
 
+            String input = "";
+
+            if(sc.hasNext()){
+                input = sc.next();
+            }
+
+            char[] arr = new char[14];
+            int marker = 0;
+
+            while(marker + 14 < input.length()) {
+                for (int i = marker; i < arr.length + marker; i++) {
+                    arr[i - marker] = input.charAt(i);
+                }
+
+                if (checkForMarker(arr)) {
+                    marker = marker + 14;
+                    break;
+                }
+                //System.out.println("Current marker: " + marker);
+                marker++;
+            }
+
+            System.out.println("Marker at: " + marker);
+
+        }catch (FileNotFoundException ignored){}
     }
 
     private static boolean checkForMarker(char[] input){

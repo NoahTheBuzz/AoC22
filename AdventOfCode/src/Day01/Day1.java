@@ -12,7 +12,7 @@ public class Day1 {
 
     public static void main(String[] args) {
         try{
-            Scanner sc = new Scanner(new File("src/Day1/input.txt"));
+            Scanner sc = new Scanner(new File("src/Day01/input.txt"));
 
             int tempMax = 0;
 

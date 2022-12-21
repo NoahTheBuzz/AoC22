@@ -24,7 +24,7 @@ public class Day5 {
 
     private static void partA(){
         try{
-            Scanner sc = new Scanner(new File("src/Day5/input.txt"));
+            Scanner sc = new Scanner(new File("src/Day05/input.txt"));
 
             while(sc.hasNextLine()){
                 String input = sc.nextLine();
@@ -45,7 +45,7 @@ public class Day5 {
 
     private static void partB(){
         try{
-            Scanner sc = new Scanner(new File("src/Day5/input.txt"));
+            Scanner sc = new Scanner(new File("src/Day05/input.txt"));
 
             while(sc.hasNextLine()){
                 String input = sc.nextLine();

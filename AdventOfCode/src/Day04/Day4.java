@@ -13,7 +13,7 @@ public class Day4 {
 
     private static void partA(){
         try{
-            Scanner sc = new Scanner(new File("src/Day4/input.txt"));
+            Scanner sc = new Scanner(new File("src/Day04/input.txt"));
 
             int result = 0;
 
@@ -42,7 +42,7 @@ public class Day4 {
 
     private static void partB(){
         try{
-            Scanner sc = new Scanner(new File("src/Day4/input.txt"));
+            Scanner sc = new Scanner(new File("src/Day04/input.txt"));
 
             int result = 0;
 
