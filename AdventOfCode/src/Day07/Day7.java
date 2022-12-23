@@ -25,7 +25,14 @@ public class Day7 {
                 String input = sc.nextLine();
                 if (input.contains("dir")){
                     String[] splits = input.split(" ");
-                    currentNode.addChild(splits[1], currentNode);
+                    currentNode.addChild(new Node(splits[1], currentNode));
+                }
+                if (input.contains("cd")){
+                    String[] splits = input.split(" ");
+                    if(splits[2].equals("/")) {
+                       continue;
+                    }
+                    currentNode = currentNode.getChild(splits[2]);
                 }
 
             }
@@ -60,6 +67,15 @@ class Node {
 
     public List<Node> getChilds() {
         return childs;
+    }
+
+    public Node getChild(String name){
+        for(int i = 0; i < childs.size(); i++){
+            if(childs.get(i).getName().equals(name)){
+                return childs.get(i);
+            }
+        }
+        return null;
     }
 
     public List<Integer> getFiles() {
